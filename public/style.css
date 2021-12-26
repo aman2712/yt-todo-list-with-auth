@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;400;500;600;700&display=swap");
+/* ENCODE SANS SC IS BETTER :P */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6a5acd;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+.main {
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+
+.main > h1 {
+  font-size: 30px;
+  color: rgb(26, 25, 25);
+  margin: 0 0 30px 0;
+}
+
+.main > p {
+  color: red;
+  margin: 10px 0;
+}
+
+.main > form > input {
+  width: 95%;
+  padding: 15px;
+  background-color: rgba(204, 204, 204, 0.385);
+  color: black;
+  border: 0;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+.main > form > button {
+  background-color: #6a5acd;
+  padding: 15px;
+  width: 95%;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.main > form > input:focus,
+.main > form > button:focus {
+  outline: none;
+}
+
+.main > form > p {
+  margin-top: 15px;
+}
+
+.main > form > p > a {
+  color: #6a5acd;
+}
+
+.home{
+  width: 600px;
+  max-width: 90%;
+  height: auto;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.337);
+  padding: 20px;
+}
+
+.home > h3{
+  font-size: 35px;
+  margin: 17px 0 23px 0;
+}
+
+.home > ul{
+  list-style-type: none;
+}
+
+.home > ul > li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: black;
+  padding: 15px;
+  margin: 7px 0;
+}
+
+.home > ul > li > form > button > i{
+  color: red;
+}
+
+.inputField{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+
+.inputField input{
+  width: 90%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField input:focus{
+  border-color: #8e49e8;
+}
+
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #6a5acd;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.inputField button:hover{
+  background: #721ce3;
+}
+
+.inputField button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.logoutBtnWrap{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.logoutBtn{
+  border: 0;
+  background-color: #fff;
+  color: black;
+  font-size: 17px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

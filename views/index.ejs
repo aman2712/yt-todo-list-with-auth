@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <h3>YOUR TO-DO List, <%= name %></h3>
+      <ul>
+        <% items.forEach(function(item) { %>
+        <li>
+          <p><%= item.title %></p>
+          <form
+            action="/<%= item._id %>/delete"
+            method="post"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              style="
+                border: none;
+                background: none;
+                margin: none;
+                padding: none;
+              "
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+          </form>
+        </li>
+        <% }) %>
+      </ul>
+      <form action="/add" method="post" class="inputField">
+        <input type="text" placeholder="Add your new todo" name="todo" />
+        <button type="submit">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
+    </div>
+    <form action="/logout?_method=DELETE" method="POST" class="logoutBtnWrap">
+      <button type="submit" class="logoutBtn">LOGOUT</button>
+    </form>
+  </body>
+</html>
